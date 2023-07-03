@@ -11,29 +11,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
  
-# os.environ["OPENAI_API_KEY"] = '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'
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 st.title("Upload a document and search it using AI")
-# file = st.file_uploader(label="Upload your documents here: ")
-
-
-# if file is not None:
-
-    # st.write("Uploaded")
-
-
-def clear():
-    # os.remove("/data")
-    pass
-
-# if file:
-#     loader = PyPDFLoader(file)
-#     pages = loader.load_and_split()
-#     print(pages[0])
-
-
-st.button("Clear", on_click=clear())
 
 
 input = st.text_input("Enter Search prompt")
